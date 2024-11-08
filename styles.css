@@ -1,0 +1,189 @@
+:root {
+    --base-phone-color: #555555;
+    --phone-figure-color: #383838;
+    --screen-display: #5b7e50;
+    --phone-font: Orbitron, 'Courier New', Courier, monospace;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 2rem;
+    color: #FFF;
+    background: radial-gradient(#3d3d3d, #000);
+    font-family: var(--phone-font);
+}
+
+/* Telephone figure and base design */
+
+.telephone {
+    background-color: var(--base-phone-color);
+    display: flex;
+    padding: 2rem;
+    margin-left: 1rem;
+    gap: 3rem;
+    border-radius: 2rem;
+}
+
+.telephone-figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.circle-shape {
+    width: 11rem;
+    height: 11rem;
+    border-radius: 50% 50% 30% 30%;
+    background-color: var(--phone-figure-color);
+    box-shadow: 0.5rem 0rem #000;
+    position: relative;
+    z-index: 3;
+}
+
+.circle-shape:last-of-type {
+    scale: -1;
+    box-shadow: -0.5rem -0.04rem #000;
+}
+
+.handle {
+    width: 5rem;
+    height: 30rem;
+    background-color: var(--phone-figure-color);
+    border-radius: 5rem;
+    margin-top: -1.3rem;
+    margin-bottom: -1.3rem;
+    box-shadow: 0.5rem 0rem #000;
+    position: relative;
+    z-index: 2;
+}
+
+/* Telephone input and button style */
+
+.phone-elements {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#user-input {
+    padding: .5rem;
+    background-color: var(--screen-display);
+    font-size: 2rem;
+    font-family: inherit;
+}
+
+.check-and-clear {
+    margin-top: 1rem;
+}
+
+.check-and-clear button {
+    font-family: inherit;
+    padding: .1rem 2.3rem;
+    margin-right: .5rem;
+}
+
+.buttons-div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    height: 100%;
+    margin-top: 2rem;
+}
+
+.buttons-div button {
+    font-family: inherit;
+    font-size: 2.5rem;
+    border-radius: .5rem;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:active {
+    background-color: #ff9595;
+}
+
+/* Results */
+
+#results-div {
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: var(--phone-figure-color);
+    padding: 0 2rem 1rem;
+    margin-right: 1rem;
+    height: 45rem;
+    width: 34rem;
+    border-radius: 0 1rem 1rem 0;
+    font-size: 1.5rem;
+}
+
+/* Media queries */
+
+@media (max-width: 630px) {
+    html {
+        font-size: 50%;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .telephone {
+        margin: 0;
+    }
+
+    .telephone-figure {
+        display: none
+    }
+
+    .check-and-clear {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .check-and-clear button {
+        margin: 0;
+    }
+
+    #results-div {
+        height: 27rem;
+        margin: 0;
+        border-radius: 0 0 1rem 1rem;
+        width: 30rem;
+    }
+}
+
+/* Custom scrollbar */
+
+::-webkit-scrollbar {
+    width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+    opacity: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: gray;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telephone Number Validator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <main>
+        <div class="telephone">
+            <div class="telephone-figure">
+                <div class="circle-shape"></div>
+                <div class="handle"></div>
+                <div class="circle-shape"></div>
+            </div>
+            <div class="phone-elements">
+                <label for="user-input">US Phone Number Validator</label>
+                <input type="text" id="user-input" maxlength="20" value="1 (555) 555-5555">
+                <div class="check-and-clear">
+                    <button id="check-btn">Check</button>
+                    <button id="clear-btn">Clear</button>
+                </div>
+                <div class="buttons-div">
+                    <button id="btn-1">1</button>
+                    <button id="btn-2">2</button>
+                    <button id="btn-3">3</button>
+                    <button id="btn-4">4</button>
+                    <button id="btn-5">5</button>
+                    <button id="btn-6">6</button>
+                    <button id="btn-7">7</button>
+                    <button id="btn-8">8</button>
+                    <button id="btn-9">9</button>
+                    <div class="btn-space"></div>
+                    <button id="btn-0">0</button>
+                    <button id="clear-input-btn"><i class="fa fa-refresh" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div id="telephone">
+        <div id="results-div"></div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
